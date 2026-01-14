@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <table border="1px" style="width: 150px; height: 150px">
+      <tr>
+        <th colspan="4">
+          <form>
+            <input
+              style="text-align: right"
+              id="isi"
+              type="number"
+              disabled
+            />
+          </form>
+        </th>
+        <th><input style="width: 10px;" type="text" id="op" disabled/></th>
+      </tr>
+      <tr>
+        <th><button onclick=tujuh() type="button">7</button></th>
+        <th><button onclick=lapan() type="button">8</button></th>
+        <th><button onclick=sembilan() type="button">9</button></th>
+        <th><button onclick=bagi() type="button">:</button></th>
+        <th><button onclick=del() type="button"><</button></th>
+      </tr>
+      <tr>
+        <th><button onclick=empat() type="button">4</button></th>
+        <th><button onclick=lima() type="button">5</button></th>
+        <th><button onclick=enam() type="button">6</button></th>
+        <th><button onclick=kali() type="button">*</button></th>
+        <th><button onclick=ac() type="button">ac</button></th>
+      </tr>
+      <tr>
+        <th><button onclick=satu() type="button">1</button></th>
+        <th><button  onclick=dua() type="button">2</button></th>
+        <th><button  onclick=tiga() type="button">3</button></th>
+        <th><button  onclick=krg() type="button">-</button></th>
+      </tr>
+      <tr>
+        <th><button  onclick=koma() type="button">.</button></th>
+        <th><button  onclick=nol() type="button">0</button></th>
+        <th><button  onclick=samadgn() type="button">=</button></th>
+        <th><button  onclick=tambah() type="button">+</button></th>
+      </tr>
+    </table>
+
+    <script src="js/script1.js"></script>
+  </body>
+</html>
