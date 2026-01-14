@@ -7,6 +7,10 @@ const opp = document.getElementById("op");
 isii.value = "";
 op.value = "";
 
+function geserkanan() {
+  isii.scrollLeft = isii.scrollWidth;
+}
+
 function satu() {
   if (tanda) {
     isii.value = 1;
@@ -14,6 +18,7 @@ function satu() {
   } else {
     isii.value += 1;
   }
+  geserkanan();
 }
 function dua() { 
   if (tanda) {
@@ -22,6 +27,7 @@ function dua() {
   } else {
     isii.value += 2;
   }
+  geserkanan();
 }
 function tiga() {
   if (tanda) {
@@ -29,7 +35,7 @@ function tiga() {
     tanda = false;
   } else {
     isii.value += 3;
-  }
+  }geserkanan();
 }
 function empat() {
   if (tanda) {
@@ -37,7 +43,7 @@ function empat() {
     tanda = false;
   } else {
     isii.value += 4;
-  }
+  }geserkanan();
 }
 function lima() {
   if (tanda) {
@@ -46,6 +52,7 @@ function lima() {
   } else {
     isii.value += 5;
   }
+  geserkanan();
 }
 function enam() {
   if (tanda) {
@@ -54,6 +61,7 @@ function enam() {
   } else {
     isii.value += 6;
   }
+  geserkanan();
 }
 function tujuh() {
   if (tanda) {
@@ -62,6 +70,7 @@ function tujuh() {
   } else {
     isii.value += 7;
   }
+  geserkanan();
 }
 function lapan() {
   if (tanda) {
@@ -70,6 +79,7 @@ function lapan() {
   } else {
     isii.value += 8;
   }
+  geserkanan();
 }
 
 function sembilan() {
@@ -79,6 +89,7 @@ function sembilan() {
   } else {
     isii.value += 9;
   }
+  geserkanan();
 }
 function nol() {
   if (tanda) {
@@ -87,6 +98,7 @@ function nol() {
   } else {
     isii.value += 0;
   }
+  geserkanan();
 }
 function koma(){
     if(!(isii.value==="")){
