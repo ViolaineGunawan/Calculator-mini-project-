@@ -100,31 +100,39 @@ function nol() {
   }
   geserkanan();
 }
+
 function koma(){
-    if(!(isii.value==="")){
+    if(isii.value !== "" && !isii.value.includes(".")){
         isii.value+='.';
     }
+    geserkanan();
 }
-//MASIH EOROROROOROR
 
 function operasikan() {
   if ((opp.value === '+')) {
-    isii.value = Number(angka1) + Number(isii.value);
+isii.value = Math.round((Number(angka1) + Number(isii.value)) * 1000000000) / 1000000000;
     angka1 = isii.value;
   } else if ((opp.value === '-')) {
-    isii.value = Number(angka1) - Number(isii.value);
+    isii.value = Math.round((Number(angka1) - Number(isii.value)) * 1000000000) / 1000000000;
+
     angka1 = isii.value;
   } else if ((opp.value === '*')) {
-    isii.value = Number(angka1) * Number(isii.value);
+    isii.value = Math.round((Number(angka1) * Number(isii.value)) * 1000000000) / 1000000000;
+
     angka1 = isii.value;
   } else if ((opp.value === ':')) {
-    isii.value = Number(angka1) / Number(isii.value);
+    isii.value = Math.round((Number(angka1) / Number(isii.value)) * 1000000000) / 1000000000;
+
     angka1 = isii.value;
   }
+
+  
 }
 
 function tambah() {
-  if (angka1 === "") {
+    if (opp.value === '=') {
+    angka1 = isii.value; }
+  else if (angka1 === "") {
     angka1 = isii.value;
   } else {
     if (!(opp.value === '=')) {
@@ -136,7 +144,9 @@ function tambah() {
 }
 
 function kali() {
-  if (angka1 === "") {
+      if (opp.value === '=') {
+    angka1 = isii.value; }
+  else if (angka1 === "") {
     angka1 = isii.value;
   } else {
     if (!(opp.value === '=')) {
@@ -148,7 +158,9 @@ function kali() {
 }
 
 function bagi() {
-  if (angka1 === "") {
+      if (opp.value === '=') {
+    angka1 = isii.value; }
+  else if (angka1 === "") {
     angka1 = isii.value;
   } else {
     if (!(opp.value === '=')) {
@@ -160,8 +172,12 @@ function bagi() {
 }
 
 function samadgn() {
-  operasikan();
-  opp.value = '=';
+  if (opp.value !== '=') {
+    operasikan();
+    opp.value = '=';
+    angka1="";
+    tanda = true;
+  }
 }
 
 function krg() {
@@ -181,4 +197,8 @@ function ac(){
     opp.value="";
     isii.value = "";
     tanda = false;
+}
+
+function del(){
+  isii.value=isii.value.slice(0, -1);
 }
